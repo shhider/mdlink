@@ -2,100 +2,58 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>复制当前页面的Markdown格式链接 - MDLink By shhider</title>
-  <style type="text/css">
-  body, html{
-    margin: 0; padding: 0;
-  }
-  a{ text-decoration: none; color: #666;}
-  a:hover{ text-decoration: underline; color: #666}
-
-  .m-body{
-    padding: 30px; padding-top: 20px;
-    width: 270px;
-  }
-
-  .link_item{
-    margin: 20px 0;
-    white-space: nowrap;
-    font-size: 0;
-  }
-  .link_item .link_label{
-    display: inline-block;
-    vertical-align: middle;
-    width: 40px; margin-right: 10px;
-    height: 36px; line-height: 36px;
-    font-size: 16px; color: #999;
-  }
-  .link_item .link_input{
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    width: 220px; height: 36px;
-    padding: 11px 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 14px; line-height: 1em;
-    color: #999;
-    outline: none;
-    transition: border-color .3s;
-  }
-  .link_item .link_input:focus{
-    border-color: #15AFD6;
-    color: #666;
-  }
-  .u-btn{
-    display: block;
-    box-sizing: border-box;
-    width: 100%; height: 36px;
-    text-align: center;
-    font-size: 18px; line-height: 36px;
-    color: #fff;
-    background-color: #15AFD6;
-    border: 0;
-    cursor: pointer;
-    outline: none;
-  }
-  .u-btn:disabled{
-    background-color: #3ABFE1;
-    cursor: default;
-  }
-
-
-  .m-foot{
-    width: 100%; height: 30px;
-    border-top: 1px solid #eee;
-  }
-  .m-foot p{
-    margin: 5px; line-height: 20px;
-    text-align: right;
-    font-size: 14px;
-    color: #666;
-  }
-  .m-foot p strong{ margin: 0; padding: 0; color: #333;}
-  </style>
+  <title>复制当前页面的链接，支持 Markdown 等多种格式 - MDLink By shhider</title>
+  <link rel="stylesheet" href="./static/css/mdlink.css">
 </head>
 <body>
+  <div class="m-header">
+    <h1><span class="logo blue">[)</span>MDLink</h1>
+  </div>
+
   <div class="m-body">
 
     <div class="link_item">
-      <label class="link_label" for="linkTitle">Title:</label>
-      <input id="linkTitle" class="link_input" type="text">
+      <label class="link_label" for="linkTitle">Title</label>
+      <div class="link_ctrl">
+        <input id="linkTitle" class="link_input" type="text">
+      </div>
     </div>
 
     <div class="link_item">
-      <label class="link_label" for="linkURL">Link:</label>
-      <input id="linkURL" class="link_input" type="text">
+      <label class="link_label" for="linkURL">Link</label>
+      <div class="link_ctrl">
+        <input id="linkURL" class="link_input" type="text">
+      </div>
+    </div>
+
+    <div class="link_item">
+      <div class="link_label">Format</div>
+      <div class="link_ctrl">
+        <div class="radio_group">
+          <label class="u-radio">
+            <input type="radio" name="linkFormat" value="markdown" checked>
+            <span>
+              <span class="blue">[</span>Title<span class="blue">](</span>Link<span class="blue">)</span>
+            </span>
+          </label>
+          <label class="u-radio">
+            <input type="radio" name="linkFormat" value="chat">
+            <span>
+              Link<span class="blue">\n</span>Title
+            </span>
+          </label>
+        </div>
+      </div>
     </div>
 
     <button id="btnCopy" class="u-btn">Copy to Clipboard</button>
   </div>
 
   <div class="m-foot">
-    <p><strong>MDLink</strong> By <a href="https://github.com/shhider" target="_blank">shhider</a></p>
+    <p>by <a href="https://github.com/shhider" target="_blank">shhider</a></p>
   </div>
 
-<script src="js/clipboard.min.js"></script>
-<script src="js/popup.js"></script>
+<script src="./static/js/clipboard.min.js"></script>
+<script src="./static/js/mdlink.js"></script>
 </body>
 </html>
