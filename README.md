@@ -2,7 +2,7 @@
 
 ![MDLink Icon](icon/icon128.png)
 
-**author：shhider**
+> Published on Microsoft Edge Addons!   [>> Go](https://microsoftedge.microsoft.com/addons/detail/nlbkocefhbaffaakjnpdaagadiaiknac)
 
 平时在撰写Markdown文档的过程中，常常需要添加一些链接，但是Chrome浏览器中没有快速的方法获得当前页面的标题。本着程序员不能把时间浪费在机械劳动的原则上，我开发了这个扩展，一键复制Markdown格式链接。
 
