@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "MDLink",
   "description": "通过MDLink，可以快速地复制当前页面的Markdown格式链接",
-  "version": "0.2",
+  "version": "0.3",
   "author": "shhider(shhider@163.com)",
 
   "icons": {
@@ -12,7 +12,7 @@
     "128": "icon/icon128.png"
   },
 
-  "browser_action": {
+  "action": {
     "default_icon": "icon/icon.png",
     "default_popup": "popup.html",
     "default_title": "查看当前页面的标题和链接"
