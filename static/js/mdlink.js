@@ -31,14 +31,39 @@ function init() {
   })
 }
 
+// #region linkFormat
 function getLinkFormat() {
   for (let i = 0; i < formatRadios.length; i++) {
     if (formatRadios[i].checked) {
-      return formatRadios[i].value
+      const fmt = formatRadios[i].value;
+      cacheLinkFormat(fmt);
+      return fmt;
     }
   }
   return 'markdown'
 }
+
+function setLinkFormat(format) {
+  for (let i = 0; i < formatRadios.length; i++) {
+    const item = formatRadios[i];
+    if (item.value === format) {
+      item.click();
+    }
+  }
+}
+
+const FORMAT_CACHE_KEY = 'last_format';
+function cacheLinkFormat(format) {
+  const fmt = format.trim().toLowerCase();
+  if (fmt) {
+    localStorage[FORMAT_CACHE_KEY] = fmt;
+  }
+}
+
+function getCachedLinkFormat() {
+  return localStorage[FORMAT_CACHE_KEY] ?? undefined;
+}
+// #endregion
 
 function onLinkChange() {
   const title= iptTitle.value.trim()
@@ -66,6 +91,7 @@ function start() {
     const tab = tabs[0]
     iptTitle.value = tab.title
     iptURL.value = tab.url
+    setLinkFormat(getCachedLinkFormat() ?? 'markdown');
     onLinkChange()
     init()
   })
