@@ -18,7 +18,13 @@
     "default_title": "查看当前页面的标题和链接"
   },
   "permissions": [
-    "activeTab",                  // see the URL of the current tab
-    "tabs"
-  ]
+    "activeTab",
+    "tabs",
+    "contextMenus",
+    "clipboard-write"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
