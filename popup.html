@@ -13,14 +13,14 @@
   <div class="m-body">
 
     <div class="link_item">
-      <label class="link_label" for="linkTitle">Title</label>
+      <div class="link_label">Title</div>
       <div class="link_ctrl">
         <input id="linkTitle" class="link_input" type="text">
       </div>
     </div>
 
     <div class="link_item">
-      <label class="link_label" for="linkURL">Link</label>
+      <div class="link_label">Link</div>
       <div class="link_ctrl">
         <input id="linkURL" class="link_input" type="text">
       </div>
@@ -32,15 +32,18 @@
         <div class="radio_group">
           <label class="u-radio">
             <input type="radio" name="linkFormat" value="markdown" checked>
-            <span>
-              <span class="blue">[</span>Title<span class="blue">](</span>Link<span class="blue">)</span>
-            </span>
+            <div class="u-radio-block">
+              <p><span class="blue">[</span>Title<span class="blue">](</span>Link<span class="blue">)</span></p>
+              <br/>
+              <p class="txt-info">* for Markdown</p>
+            </div>
           </label>
           <label class="u-radio">
             <input type="radio" name="linkFormat" value="chat">
-            <span>
-              Link<span class="blue">\n</span>Title
-            </span>
+            <div class="u-radio-block">
+              <p>Link<span class="blue">↵</span></p>
+              <p>Title</p>
+            </div>
           </label>
         </div>
       </div>
@@ -50,7 +53,7 @@
   </div>
 
   <div class="m-foot">
-    <p>by <a href="https://github.com/shhider" target="_blank">shhider</a></p>
+    <p>created by <a href="https://github.com/shhider" target="_blank">shhider</a></p>
   </div>
 
 <script src="./static/js/clipboard.min.js"></script>
