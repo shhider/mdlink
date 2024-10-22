@@ -73,13 +73,16 @@ function onLinkChange() {
   let link = ''
   switch (format) {
     case 'markdown':
-      _link = `[${title}](${url})`
+      link = `[${title}](${url})`
       break
     case 'chat':
-      _link = `${url}\n${title}`
+      link = `${url}\n${title}`
       break
+    case 'html-a-link':
+      link = 'todo';
+      break;
   }
-  btnCopy.dataset.clipboardText = _link;
+  btnCopy.dataset.clipboardText = link;
 }
 
 function start() {
