@@ -16,7 +16,7 @@ function init() {
     btnCopy.innerText = 'Copied'
     btnCopy.disabled = true
     setTimeout(() => {
-      btnCopy.innerText = 'Copy to Clipboard'
+      btnCopy.innerText = 'Copy'
       btnCopy.disabled = false
     }, 1000)
   })

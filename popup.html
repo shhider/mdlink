@@ -12,25 +12,29 @@
       <h1>MDLink</h1>
       <p>by <a href="https://github.com/shhider" target="_blank">shhider</a></p>
     </div>
+    <div class="btn-wrapper">
+      <button id="btnCopy" class="u-btn">Copy</button>
+    </div>
   </div>
 
   <div class="m-body">
+    <div class="u-2column">
+      <div class="link_item">
+        <div class="link_label">Title</div>
+        <div class="link_ctrl">
+          <input id="linkTitle" class="link_input" type="text">
+        </div>
+      </div>
 
-    <div class="link_item">
-      <div class="link_label">Title</div>
-      <div class="link_ctrl">
-        <input id="linkTitle" class="link_input" type="text">
+      <div class="link_item">
+        <div class="link_label">Link</div>
+        <div class="link_ctrl">
+          <input id="linkURL" class="link_input" type="text">
+        </div>
       </div>
     </div>
 
-    <div class="link_item">
-      <div class="link_label">Link</div>
-      <div class="link_ctrl">
-        <input id="linkURL" class="link_input" type="text">
-      </div>
-    </div>
-
-    <div class="link_item">
+    <div class="link_item" style="padding-top: 12px;">
       <div class="link_label">Format</div>
       <div class="link_ctrl">
         <div class="radio_group">
@@ -59,7 +63,7 @@
       </div>
     </div>
 
-    <button id="btnCopy" class="u-btn">Copy to Clipboard</button>
+
   </div>
 
 <script src="./static/js/clipboard.min.js"></script>
