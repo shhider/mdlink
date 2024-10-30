@@ -7,53 +7,66 @@
 </head>
 <body>
   <div class="m-header">
-    <h1><span class="logo blue">[)</span>MDLink</h1>
+    <div class="logo"></div>
+    <div style="display: inline-block;">
+      <h1>MDLink</h1>
+      <p>by <a href="https://github.com/shhider" target="_blank">shhider</a></p>
+    </div>
+    <div class="btn-wrapper">
+      <button id="btnCopy" class="u-btn">Copy</button>
+      <div id="btnAlert" class="u-tips"></div>
+    </div>
   </div>
 
   <div class="m-body">
+    <div class="u-2column">
+      <div class="link_item">
+        <div class="link_label">Title</div>
+        <div class="link_ctrl">
+          <input id="linkTitle" class="link_input" type="text">
+        </div>
+      </div>
 
-    <div class="link_item">
-      <label class="link_label" for="linkTitle">Title</label>
-      <div class="link_ctrl">
-        <input id="linkTitle" class="link_input" type="text">
+      <div class="link_item">
+        <div class="link_label">Link</div>
+        <div class="link_ctrl">
+          <input id="linkURL" class="link_input" type="text">
+        </div>
       </div>
     </div>
 
-    <div class="link_item">
-      <label class="link_label" for="linkURL">Link</label>
-      <div class="link_ctrl">
-        <input id="linkURL" class="link_input" type="text">
-      </div>
-    </div>
-
-    <div class="link_item">
+    <div class="link_item" style="padding-top: 12px;">
       <div class="link_label">Format</div>
       <div class="link_ctrl">
         <div class="radio_group">
           <label class="u-radio">
-            <input type="radio" name="linkFormat" value="markdown" checked>
-            <span>
-              <span class="blue">[</span>Title<span class="blue">](</span>Link<span class="blue">)</span>
-            </span>
+            <input type="radio" name="linkFormat" value="html-a-link">
+            <div class="u-radio-block">
+              <p class="blue" style="text-decoration: underline" title="Link">Title</p>
+            </div>
           </label>
           <label class="u-radio">
             <input type="radio" name="linkFormat" value="chat">
-            <span>
-              Link<span class="blue">\n</span>Title
-            </span>
+            <div class="u-radio-block">
+              <p>Link<span class="blue">↵</span></p>
+              <p>Title</p>
+            </div>
+          </label>
+          <label class="u-radio">
+            <input type="radio" name="linkFormat" value="markdown" checked>
+            <div class="u-radio-block">
+              <p><span class="blue">[</span>Title<span class="blue">](</span>Link<span class="blue">)</span></p>
+              <br/>
+              <p style="font-size: 10px; color: #999;">* for Markdown</p>
+            </div>
           </label>
         </div>
       </div>
     </div>
 
-    <button id="btnCopy" class="u-btn">Copy to Clipboard</button>
+
   </div>
 
-  <div class="m-foot">
-    <p>by <a href="https://github.com/shhider" target="_blank">shhider</a></p>
-  </div>
-
-<script src="./static/js/clipboard.min.js"></script>
 <script src="./static/js/mdlink.js"></script>
 </body>
 </html>

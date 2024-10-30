@@ -3,7 +3,7 @@
 
   "name": "MDLink",
   "description": "通过MDLink，可以快速地复制当前页面的Markdown格式链接",
-  "version": "0.3",
+  "version": "0.4",
   "author": "shhider(shhider@163.com)",
 
   "icons": {
