@@ -53,7 +53,7 @@ async function copyLinkInText(txtToCopy) {
 function isClipboardSupported() {
   let supported = false;
   try {
-    supported = ClipboardItem.supports('text/html') && navigator.clipboard != null;
+    supported = navigator.clipboard != null && 'ClipboardItem' in window;
   } catch (_err) {
     //
   }
